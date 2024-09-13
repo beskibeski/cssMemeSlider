@@ -1,0 +1,160 @@
+li {
+    list-style: none;
+}
+
+.body {
+    background-color: grey;
+    overflow: hidden;
+}
+
+.slider {
+    width: 80vw;
+    height: 95vh;
+    margin: 1vw auto;
+}
+
+.slider__wrapper {
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 95% 5%;
+}
+
+.slider__container {
+    grid-column: span 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider__images {
+    display: flex;
+    margin-bottom: 2vw;
+    transition: all 1s;
+}
+
+.slider_image {
+    width: 80vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    display: inline-block;
+    height: 100%;
+}
+
+
+.slider__slide-image-first {
+    background-image: url('./src/img/1.gif');
+}
+
+.slider__slide-image-second {
+    background-image: url('./src/img/2.gif');
+}
+
+.slider__slide-image-third {
+    background-image: url('./src/img/3.gif');
+}
+
+.slider__slide-image-fourth {
+    background-image: url('./src/img/4.gif');
+}
+
+#slide-first, #slide-second, #slide-third, #slide-fourth {
+    display: none;
+}
+
+.slider__circles {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-right: 2vw;
+}
+
+.slider__slide-text-first,
+.slider__slide-text-second,
+.slider__slide-text-third,
+.slider__slide-text-fourth {
+    height: 0%;
+    opacity: 0;
+    margin-left: 10vw;
+    font-size: 1.5vw;
+}
+
+.slider__circle {
+    border-radius: 100%;
+    border-style: solid;
+    border-color: rgb(118, 118, 240);
+    display: flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: grey;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.slider__circle span {
+    display: block;
+    margin-top: -1.5vw;
+    margin-left: -1.5vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.slider__circle:hover {
+    background-color: white;
+    border-color: white;
+    transition: all 0.5s;
+}
+
+#slide-first:checked ~ .slider__circles .slider__circle:nth-child(1),
+#slide-second:checked ~ .slider__circles .slider__circle:nth-child(2),
+#slide-third:checked ~ .slider__circles .slider__circle:nth-child(3),
+#slide-fourth:checked ~ .slider__circles .slider__circle:nth-child(4) {
+    background-color: rgb(118, 118, 240);
+}
+
+#slide-first:checked ~ .slider__texts .slider__slide-text-first,
+#slide-second:checked ~ .slider__texts .slider__slide-text-second,
+#slide-third:checked ~ .slider__texts .slider__slide-text-third,
+#slide-fourth:checked ~ .slider__texts .slider__slide-text-fourth {
+    height: 100%;
+    opacity: 1;
+    margin-left: 0vw;
+    transition: margin 1s, opacity 1s;
+}
+
+#slide-first:checked ~ .slider__texts .slider__slide-text-second,
+#slide-first:checked ~ .slider__texts .slider__slide-text-third,
+#slide-first:checked ~ .slider__texts .slider__slide-text-fourth,
+#slide-second:checked ~ .slider__texts .slider__slide-text-first,
+#slide-second:checked ~ .slider__texts .slider__slide-text-third,
+#slide-second:checked ~ .slider__texts .slider__slide-text-fourth
+#slide-third:checked ~ .slider__texts .slider__slide-text-first,
+#slide-third:checked ~ .slider__texts .slider__slide-text-second,
+#slide-third:checked ~ .slider__texts .slider__slide-text-fourth,
+#slide-fourth:checked ~ .slider__texts .slider__slide-text-first,
+#slide-fourth:checked ~ .slider__texts .slider__slide-text-second,
+#slide-fourth:checked ~ .slider__texts .slider__slide-text-third {
+    height: 0%;
+    opacity: 0;
+    margin-left: 10vw;
+}
+
+#slide-first:checked ~ .slider__container .slider__images {
+    margin-left: 0;
+}
+
+#slide-second:checked ~ .slider__container .slider__images {
+    margin-left: -100%;
+}
+
+#slide-third:checked ~ .slider__container .slider__images {
+    margin-left: -200%;
+}
+
+#slide-fourth:checked ~ .slider__container .slider__images {
+    margin-left: -300%;
+}
