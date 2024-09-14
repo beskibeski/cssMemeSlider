@@ -4,6 +4,11 @@
     --color-white: rgb(242, 242, 242);
 }
 
+@font-face {
+    font-family: "Onest";
+    src: url("./src/fonts/onest.ttf") format("truetype");
+}
+
 li {
     list-style: none;
 }
@@ -87,7 +92,8 @@ li {
     opacity: 0;
     margin-left: 10vw;
     font-size: 1.6vw;
-    color: var(--color-white)
+    color: var(--color-white);
+    font-family: "Onest";
 }
 
 .slider__circle {
