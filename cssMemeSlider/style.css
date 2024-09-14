@@ -90,7 +90,7 @@ li {
 .slider__slide-text-fourth {
     height: 0%;
     opacity: 0;
-    margin-left: 10vw;
+    margin-left: -10vw;
     font-size: 1.6vw;
     color: var(--color-white);
     font-family: "Onest";
@@ -164,7 +164,7 @@ li {
 #slide-fourth:checked ~ .slider__texts .slider__slide-text-third {
     height: 0%;
     opacity: 0;
-    margin-left: 10vw;
+    margin-left: -10vw;
 }
 
 #slide-first:checked ~ .slider__container .slider__images {
@@ -197,6 +197,7 @@ li {
         text-align: left;
         order: 3;
         margin-top: 2vw;
+        min-height: 20vw;
     }
 
     .slider__slide-text-first,
